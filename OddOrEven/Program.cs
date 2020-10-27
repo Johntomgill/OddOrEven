@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace OddOrEven
 {
@@ -6,7 +7,30 @@ namespace OddOrEven
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            EvenOdd();
         }
+        public static bool EvenOdd()
+        {
+
+            Console.WriteLine($"Enter a number to determine if it is Odd or Even");
+            int num = int.Parse(Console.ReadLine());
+
+            if (num % 2 == 0)
+            {
+                Console.Write("It is even!!!");
+                return true;
+
+
+            }
+            else
+            {
+                Console.Write("It is odd!!!");
+                return false;
+
+            }
+
+        }
+
     }
+
 }
